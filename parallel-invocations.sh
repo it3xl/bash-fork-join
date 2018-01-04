@@ -8,7 +8,7 @@ echo
   printf '  op1 running %(%H:%M:%S)T\n';
   sleep 15s
   printf '  op1 done %(%H:%M:%S)T\n';
-} > op1.txt &
+} &> op1.txt &
 pid1=$!
 printf '  op1 started %(%H:%M:%S)T\n';
 
@@ -17,7 +17,7 @@ printf '  op1 started %(%H:%M:%S)T\n';
   steper2=0
   sleep 10s
   printf '  op2 done %(%H:%M:%S)T\n';
-} > op2.txt &
+} &> op2.txt &
 pid2=$!
 printf '  op2 started %(%H:%M:%S)T\n';
 
